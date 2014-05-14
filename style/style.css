@@ -1,0 +1,296 @@
+* {
+	margin: 0;
+	padding: 0
+}
+body{
+	width:100%;
+	height:768px;
+	overflow:hidden;
+}
+#main {
+	width: 1024px;
+	height: 768px;
+	margin-left: -512px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	overflow:hidden;
+	-webkit-user-select: none;  
+}
+#waterBg {
+	width: 100%;
+	height: 166px;
+	background: url(../images/water.png);
+	position: absolute;
+	top: 602px;
+	
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:1800ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-name: Ani_waterBg;
+}
+#maskTop {
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	z-index:1000;
+}
+#maskBottom {
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	top: 658px;
+	left: 0;
+	background: #000;
+	z-index:1001;
+}
+
+#shuihua0 {
+	width: 307px;
+	height: 102px;
+	background: url(../images/shuihua1.png);
+	position: absolute;
+	left: 330px;
+	top: 530px;
+	-webkit-transform-origin: 50% 100%;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:1300ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-name: Ani_shuihua0;
+	-webkit-animation-play-state:running;
+	-webkit-animation-delay:1200ms;
+}
+#tishi1{
+	position:absolute;
+	top:276px;
+	opacity:0;
+	width:1024px;
+	height:228px;
+	background:url(../images/ts1.png)
+}
+#tishi2{
+	position:absolute;
+	top:200px;
+	opacity:0;
+	width:1024px;
+	height:338px;
+	background:url(../images/ts2.png)
+
+}
+#iKonw1{
+	position:relative;
+	left:350px;
+	top:136px;
+	width:330px;
+	height:75px;
+	cursor:pointer;
+	display:none;
+	z-index:600;
+}
+#iKonw2{
+	position:relative;
+	left:350px;
+	top:266px;
+	width:330px;
+	height:75px;
+	cursor:pointer;
+	display:none;
+	z-index:600;
+}
+#tishi3{
+	position:absolute;
+	top:400px;
+	opacity:0;
+}
+#airad{
+	position:absolute;
+	top:242px;
+	opacity:0;
+}
+#jiayi{
+	position:absolute;
+	left:560px;
+	top:410px;
+	opacity:0;
+}
+#text1{
+	position:absolute;
+	left:490px;
+	top:-700px;
+	-webkit-animation-duration:1100ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-in;
+	-webkit-animation-name: Ani_text1;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-delay:5000ms;
+}
+#text1_1{
+	-webkit-animation-duration:1000ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-in;
+	-webkit-animation-name: Ani_text1_1;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-delay:6000ms;
+}
+#text1_2{
+	-webkit-animation-duration:1000ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-in;
+	-webkit-animation-name: Ani_text1_2;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-delay:6000ms;
+}
+#text1_3{
+	-webkit-animation-duration:1000ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-in;
+	-webkit-animation-name: Ani_text1_3;
+	-webkit-animation-play-state:paused;
+	-webkit-animation-delay:6000ms;
+}
+#aniBox{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+}
+#shuidi0{
+	width: 42px;
+	height: 66px;
+	background: url(../images/shuidi.png);
+	position: absolute;
+	left: 491px;
+	top: 20px;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:1300ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-in;
+	-webkit-animation-name: Ani_shuidi0;
+	-webkit-animation-play-state:paused;
+}
+#shuidi1{
+	width: 62px;
+	height: 86px;
+	background: url(../images/shuidi.png) no-repeat 10px 10px;
+	position: absolute;
+	left: 491px;
+	top: 20px;
+	cursor:pointer;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:4200ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-name: Ani_shuidi1;
+	-webkit-animation-play-state:paused;
+	opacity:0;
+	z-index:500
+}
+#shui4{
+	position:relative;
+	top:-520px;
+	left:0px;
+	-webkit-animation-duration:4300ms;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-name: Ani_shui4;
+	-webkit-animation-play-state:paused;
+}
+@-webkit-keyframes Ani_shuidi0 {
+ 0% {
+-webkit-transform:translateY(0px);
+}
+ 100% {
+ -webkit-transform: translateY(650px);
+}
+}
+@-webkit-keyframes Ani_shuidi1 {
+ 0% {
+-webkit-transform:translateY(0px);
+}
+ 100% {
+ -webkit-transform: translateY(650px);
+}
+}
+@-webkit-keyframes Ani_text1 {
+ 0% {
+-webkit-transform:rotate(0) translate(0px,0px);
+}
+ 100% {
+ -webkit-transform: rotate(-90deg) translate(465px,180px);
+
+}
+}
+@-webkit-keyframes Ani_text1_1 {
+ 0% {
+-webkit-transform: translate(0px,0px);
+}
+ 100% {
+ -webkit-transform: translate(0px,20px);
+
+}
+}
+@-webkit-keyframes Ani_text1_2 {
+ 0% {
+-webkit-transform:scale(1,1)  translate(0px,0px);
+}
+ 100% {
+ -webkit-transform:scale(0.5,0.5)  translate(56px,0px);
+
+}
+}
+@-webkit-keyframes Ani_text1_3 {
+ 0% {
+-webkit-transform: translate(0px,0px);
+}
+ 100% {
+ -webkit-transform: translate(0px,-28px);
+
+}
+}
+@-webkit-keyframes Ani_shui4 {
+ 0% {
+-webkit-transform: translate(0px,0px);
+opacity:100;
+}
+50%{
+	opacity:100;
+}
+ 100% {
+ -webkit-transform: translate(0px,90px);
+opacity:0;
+}
+}
+@-webkit-keyframes Ani_shuihua0 {
+ 0% {
+-webkit-transform: translate(0px,20px) scale(0.5,0.5);
+	opacity:0;
+}
+20% {
+-webkit-transform: translate(0px,20px) scale(0.5,0.5);
+	opacity:0.5;
+}
+ 70% {
+ -webkit-transform: translate(0px,0px) scale(1,1);
+opacity:1;
+}
+100% {
+-webkit-transform: translate(0px,10px) scale(0.9,0.9);
+	opacity:0;
+}
+}
+@-webkit-keyframes Ani_waterBg {
+ 0% {
+background-position: 0px 0px;
+
+}
+
+100% {
+background-position: 94px 0px;
+
+}
+}

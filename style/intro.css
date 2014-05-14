@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-user-select: none;
+}
+:root {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.7em;
+  background-position: center top;
+  background-size: 320px 533px; 
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url(../images/mbg.jpg);
+
+}
+.hide{
+	display: none;
+}
+#stage {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 320px;
+	height: 480px;
+}
+.animaBase {
+	position: absolute;
+	background-repeat: no-repeat;
+	-webkit-animation-fill-mode: both;
+	-webkit-transform-origin: 50% 50%;
+	background-size: cover;
+}
+#sb {
+	width: 320px;
+	height: 480px;
+	top: -10px;
+	left: 0;
+	background-image: url(../images/sb.png);
+	opacity: 0.4;
+	-webkit-transform-origin: 50% 0%;
+	animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+}
+#sb2 {
+	width: 320px;
+	height: 480px;
+	top: -10px;
+	left: 0;
+	background-image: url(../images/sb2.jpg);
+
+}
+#sb3 {
+	width: 320px;
+	height: 480px;
+	top: -10px;
+	left: 0;
+	background-image: url(../images/sb3.jpg);
+}
+#ticket{
+	right: 22px;
+	bottom: 33px;
+	width: 104px;
+	height: 64px;
+	background-image: url(../images/ticket.png);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.4);
+}
+#ticket:active,#ticket:hover{
+	transform: scale(0.94);
+	-webkit-transform: scale(0.94);
+}
+#text{font-size: 18px;color: #222;text-align: center; margin-top: 110px;}
+#plane {
+	right: -240px;
+	top: 96px;
+	width: 220px;
+	height: 46px;
+	background-image: url(../images/plane.png);
+
+	animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+}
+#plane2 {
+	right: -240px;
+	top: 96px;
+	width: 220px;
+	height: 46px;
+	background-image: url(../images/plane.png);
+
+	animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+}
+#train {
+	left: -374px;
+	bottom: 30px;
+	width: 370px;
+	height: 32px;
+	background-image: url(../images/train.png);
+	animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+}
+#fl {
+	left: 0px;
+	bottom: 0;
+	width: 320px;
+	height: 55px;
+	background-image: url(../images/fl.png);
+}
+#c11 {
+	left: 64px;
+	top: 196px;
+	width: 738px;
+	height: 354px;
+	background-image: url(../images/c1.png);
+	-webkit-transform: translate3d(-221px, -363px,0);
+}
+#c12 {
+	left: 192px;
+	top: 218px;
+	width: 738px;
+	height: 354px;
+	background-image: url(../images/c1.png);
+	-webkit-transform: translate3d(-318px, -95px,0);
+}
+#c13 {
+	left: 128px;
+	top: 210px;
+	width: 738px;
+	height: 354px;
+	background-image: url(../images/c1.png);
+	-webkit-transform: translate3d(-372px, 4px,0);
+}
+#c21 {
+	left: 171px;
+	top: 155px;
+	width: 535px;
+	height: 298px;
+	background-image: url(../images/c2.png);
+	-webkit-transform: translate3d(-222px, -190px,0);
+}
+#c22 {
+	left: 145px;
+	top: 67px;
+	width: 535px;
+	height: 298px;
+	background-image: url(../images/c2.png);
+	-webkit-transform: translate3d(-400px, 36px,0);
+	}
+#c23 {
+	left: 255px;
+	top: 69px;
+	width: 535px;
+	height: 298px;
+	background-image: url(../images/c2.png);
+	-webkit-transform: translate3d(-334px, -41px,0);
+	}
+#c31 {
+	left: 188px;
+	top: 155px;
+	width: 351px;
+	height: 195px;
+	background-image: url(../images/c3.png);
+	-webkit-transform: translate3d(-274px, -145px,0);
+}
+#c32 {
+	left: 188px;
+	top: 155px;
+	width: 351px;
+	height: 195px;
+	background-image: url(../images/c3.png);
+	-webkit-transform: translate3d(-60px, 3px,0);
+}
+#c33 {
+	left: 188px;
+	top: 155px;
+	width: 351px;
+	height: 195px;
+	background-image: url(../images/c3.png);
+	-webkit-transform: translate3d(-6px, -44px,0);
+}
+#c41 {
+	left: 156px;
+	top: 86px;
+	width: 305px;
+	height: 321px;
+	background-image: url(../images/c4.png);
+	-webkit-transform: translate3d(-115px, 113px,0);
+}
+#c42 {
+	left: 82px;
+	top: 235px;
+	width: 305px;
+	height: 321px;
+	background-image: url(../images/c4.png);
+	-webkit-transform: translate3d(-82px, -204px,0);
+
+}

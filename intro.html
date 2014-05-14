@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>可逸兰亭</title>
+<link rel="stylesheet" type="text/css" href="style/intro.css">
+<link rel="stylesheet" type="text/css" href="style/animate.min.css">
+</head>
+<body>
+<div id="stage">
+  <div id="sb" class="animaBase"></div>
+  <div id="sb2" class="animaBase hide"></div>
+  <div id="sb3" class="animaBase hide"></div>
+  <div id="plane" class="animaBase"></div>
+  <div id="plane2" class="animaBase"></div>
+  <div id="trainBox2"> <div id="trainBox"><div id="train" class="animaBase"></div></div></div>
+  <div id="plane" class="animaBase"></div>
+  <div id="fl" class="animaBase"></div>
+  <div id="clouds">
+    <div id="c11" class="animaBase "></div>
+    <div id="c12" class="animaBase "></div>
+    <div id="c13" class="animaBase "></div>
+    <div id="c21" class="animaBase"></div>
+    <div id="c22" class="animaBase "></div>
+    <div id="c23" class="animaBase "></div>
+    <div id="c31" class="animaBase "></div>
+    <div id="c32" class="animaBase "></div>
+    <div id="c33" class="animaBase "></div>
+    <div id="c41" class="animaBase "></div>
+    <div id="c42" class="animaBase "></div>
+  </div>
+  <div id="ticket" class="animaBase hide"></div>
+  <div id="text" class="hide">从上海到可逸兰亭有地铁<br>很快就到</div>
+</div>
+
+<script src="js/zepto.min.js"></script> 
+<script src="js/move.min.js"></script> 
+<script>
+
+$(function($) {
+  var _sb = move('#sb'),
+  _c11 = move('#c11'),
+  _c12 = move('#c12'),
+  _c13 = move('#c13'),
+  _c21 = move('#c21'),
+  _c22 = move('#c22'),
+  _c23 = move('#c23'),
+  _c31 = move('#c31'),
+  _c32 = move('#c32'),
+  _c33 = move('#c33'),
+  _c41 = move('#c41'),
+  _c42 = move('#c42'),
+  _plane = move('#plane'),
+  _plane2 = move('#plane2'),
+  _train = move('#train'),
+  _trainBox = move('#trainBox'),
+  _trainBox2 = move('#trainBox2'),
+  $ticket = $('#ticket'),
+  $text = $('#text'),
+  $train = $('#train'),
+  $trainBox = $('#trainBox'),
+  $sb = $('#sb'),
+  $sb2 = $('#sb2'),
+  $sb3 = $('#sb3')
+  ;
+
+  var step = 0;
+
+  var t = setTimeout(function(){
+    //云
+    aniFuc();
+  },400);
+
+  var t2 = setTimeout(function(){
+    $ticket.show();
+    $ticket.addClass('animated bounceInDown');
+  },3100);
+
+    _plane
+    .x(-800)
+    .y(-10)
+    .delay(5800)
+    .duration(7000)
+    .end();
+
+
+  $ticket.on('click',function() {
+    if (step == 0) {
+      //场景2
+      step++;
+      $ticket.removeClass('animated bounceInDown');
+      _train
+      .ease('in')
+      .x(370)
+      .duration(3800)
+      .end()
+
+      setTimeout(function(){
+        $('#clouds').hide();
+        $sb2.show();
+        $sb.hide();
+        $train.attr('style','');
+        $ticket.hide();
+
+        _trainBox
+          .ease('out')
+          .x(170)
+          .duration(1800)
+          .delay(100)
+          .end();
+      },3200)
+
+      setTimeout(function(){
+          $ticket.show();
+          $ticket.addClass('animated bounceInDown');
+
+      },5300)
+
+    }else if(step == 1){
+      //场景3
+        step++;
+        _train
+        .ease('in')
+        .x(-171)
+        .duration(1800)
+        .end()
+
+         setTimeout(function(){
+          $sb3.show();
+          $sb2.hide();
+          $ticket.hide();
+          $train.attr('style','');
+          $trainBox.attr('style','');
+
+          _trainBox2
+          .ease('out')
+          .x(240)
+          .duration(1700)
+          .delay(100)
+          .end();
+         },1800)
+
+         setTimeout(function(){
+          $text.show();
+          $text.addClass('animated fadeInRightBig');
+         },4400)
+
+          _plane2
+          .x(-800)
+          .y(-10)
+          .delay(2800)
+          .duration(6000)
+          .end();
+
+    };
+  });
+  var SPEED = 1;
+
+  function aniFuc(){
+    _sb
+    .scale(1.03)
+    .set('opacity',1)
+    .duration(3300*SPEED)
+    .delay(100)
+    .end();
+
+    _c11
+    .set('opacity',1)
+    .duration(1700*SPEED)
+    .then()
+      .to(-438, -499)
+      .duration(1700*SPEED)
+      .set('opacity',.15)
+    .end();
+
+    _c12
+    .set('opacity',1)
+    .duration(2200*SPEED)
+    .then()
+      .to(-640, -58)
+      .set('opacity',.1)
+      .duration(1200*SPEED)
+    .end();
+
+    _c13
+    .set('opacity',1)
+    .duration(1700*SPEED)
+    .then()
+      .to(-133, -45)
+      .set('opacity',.15)
+      .duration(1700*SPEED)
+    .end();
+
+    _c21
+    .to(-195, -192)
+    .duration(400*SPEED)
+    .then()
+      .set('opacity',1)
+      .duration(1400*SPEED)
+      .pop()
+      .then()
+        .to(-158, -170)
+        .set('opacity',.15)
+        .duration(1600*SPEED)
+        .pop()
+    .end();
+
+    _c22
+    .to(-430, 3)
+    .duration(1200*SPEED)
+    .then()
+      .set('opacity',.15)
+      .duration(1100*SPEED)
+      .pop()
+      .then()
+        .to(-260, -78)
+        .set('opacity',.15)
+        .duration(1100*SPEED)
+        .pop()
+    .end();
+
+    _c23
+    .set('opacity',1)
+    .duration(2400*SPEED)
+    .then()
+      .to(-248, -197)
+      .set('opacity',.15)
+      .duration(1000*SPEED)
+    .end();
+
+    _c31
+    .to(-287, -149)
+    .duration(1200*SPEED)
+    .then()
+      .set('opacity',1)
+      .duration(1100*SPEED)
+      .to(-406, -184)
+      .set('opacity',.15)
+      .duration(1100*SPEED)
+      .pop()
+    .end();
+
+    _c32
+    .to(-37, -4)
+    .duration(1500*SPEED)
+    .then()
+      .set('opacity',1)
+      .duration(700*SPEED)
+      .pop()
+      .then()
+        .to(108, -4)
+        .duration(1200*SPEED)
+        .set('opacity',.15)
+        .pop()
+    .end();
+
+    _c33
+    .set('opacity',1)
+    .duration(2400*SPEED)
+    .then()
+      .to(13, -3)
+      .set('opacity',.15)
+      .duration(1000*SPEED)
+    .end();
+
+    _c41
+    .to(-91, 128)
+    .duration(1100*SPEED)
+    .then()
+      .set('opacity',1)
+      .duration(1100*SPEED)
+      .pop()
+      .then()
+        .to(10, 154)
+        .duration(1200*SPEED)
+        .set('opacity',.15)
+        .pop()
+    .end();
+
+    _c42
+    .to(-67, -191)
+    .duration(300*SPEED)
+    .then()
+      .set('opacity',1)
+      .duration(1600*SPEED)
+      .pop()
+      .then()
+        .to(459, 150)
+        .duration(1500*SPEED)
+        .set('opacity',.15)
+        .pop()
+    .end();
+  }
+
+});
+
+</script>
+</body>
+</html>
