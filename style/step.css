@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-user-select: none;
+}
+:root {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.7em;
+  background-position: center top;
+  background-size: 320px 533px; 
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg.jpg);
+height: 100%;
+}
+html{height: 100%}
+
+.hide{
+	display: none;
+}
+
+#stage {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 320px;
+	height: 100%;
+	max-height: 520px;
+}
+.animaBase {
+	position: absolute;
+	background-repeat: no-repeat;
+	-webkit-animation-fill-mode: both;
+	-webkit-transform-origin: 50% 50%;
+	background-size: cover;
+}
+
+#cao {
+	bottom: 0px;
+	left: 0;
+	width: 320px;
+	height: 92px;
+	background-image: url(../images/cao.png);
+}
+#butterfly {
+	bottom: 282px;
+	left: 110px;
+	width: 104px;
+	height: 41px;
+	background-image: url(../images/butterfly.png);
+}
+#hand {
+	bottom: 81px;
+	left: 0;
+	width: 245px;
+	height: 118px;
+	background-image: url(../images/hand.png);
+}
+#tree1 {
+	bottom: 165px;
+	left: 123px;
+	width: 112px;
+	height: 129px;
+	background-image: url(../images/tree1.png);
+}
+#lou {
+	bottom: 73px;
+	left: 0;
+	width: 320px;
+	height: 148px;
+	background-image: url(../images/lou.png);
+}
+#lou2 {
+	bottom: 0px;
+	left: 0;
+	width: 320px;
+	height: 480px;
+	opacity: 0;
+	background-image: url(../images/lou2.jpg);
+}
+#man {
+	bottom: -20px;
+	left: -20px;
+	width: 361px;
+	height: 368px;
+	background-image: url(../images/man.png);
+}
+#four {
+	bottom: 20px;
+	right: 8px;
+	width: 216px;
+	height: 110px;
+	background-image: url(../images/four.png);
+}
+#tree3 {
+	bottom: 55px;
+	right: 0;
+	width: 237px;
+	height: 277px;
+	background-image: url(../images/tree3.png);
+}
+#cao {
+	bottom: 0px;
+	left: 0;
+	width: 320px;
+	height: 92px;
+	background-image: url(../images/cao.png);
+}
+#lou3 {
+	bottom: 55px;
+	left: 0;
+	opacity: 0.9;
+	width: 320px;
+	height: 241px;
+	background-image: url(../images/lou3.png);
+}
+#text1{
+	font-size: 22px;
+	text-align: center;
+	color: rgba(0,0,0,0,8);
+	bottom: 350px;
+	left: 0;
+	width: 320px;
+}
+
+#text2{
+	font-size: 22px;
+	text-align: center;
+	color: rgba(255,255,255,0.9);
+	bottom: 250px;
+	left: 0;
+	width: 320px;
+}
+
+#text3{
+	font-size: 22px;
+	text-align: center;
+	color: rgba(0,0,0,0.9);
+	bottom: 340px;
+	left: 0;
+	width: 320px;
+}

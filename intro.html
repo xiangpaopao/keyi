@@ -94,7 +94,7 @@ $(function($) {
       _train
       .ease('in')
       .x(370)
-      .duration(3800)
+      .duration(3100)
       .end()
 
       setTimeout(function(){
@@ -106,26 +106,16 @@ $(function($) {
 
         _trainBox
           .ease('out')
-          .x(170)
-          .duration(1800)
-          .delay(100)
+          .x(400)
+          .duration(1600)
+          .delay(600)
           .end();
-      },3200)
+      },3000)
 
-      setTimeout(function(){
-          $ticket.show();
-          $ticket.addClass('animated bounceInDown');
-
-      },5300)
-
-    }else if(step == 1){
       //场景3
-        step++;
-        _train
-        .ease('in')
-        .x(-171)
-        .duration(1800)
-        .end()
+        setTimeout(function(){
+          step++;
+        
 
          setTimeout(function(){
           $sb3.show();
@@ -142,6 +132,7 @@ $(function($) {
           .end();
          },1800)
 
+          //
          setTimeout(function(){
           $text.show();
           $text.addClass('animated fadeInRightBig');
@@ -153,8 +144,9 @@ $(function($) {
           .delay(2800)
           .duration(6000)
           .end();
+        },3000)
 
-    };
+    }
   });
   var SPEED = 1;
 

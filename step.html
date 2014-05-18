@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>可逸兰亭</title>
+  <link rel="stylesheet" type="text/css" href="style/step.css">
+  <link rel="stylesheet" type="text/css" href="style/animate.min.css"></head>
+<body>
+  <div id="stage">
+    <div id="p1">
+      <div id="butterfly" class="animaBase hide"></div>
+      <div id="lou" class="animaBase "></div>
+      <div id="hand" class="animaBase hide"></div>
+      <div id="tree1" class="animaBase hide"></div>
+      <div id="text1" class="animaBase hide">二月 种下希望</div>
+    </div>
+
+    <div id="p2">
+      <div id="lou2" class="hide animaBase"></div>
+      <div id="man" class="hide animaBase"></div>
+      <div id="text2" class="animaBase hide">六月 迈出脚步</div>
+    </div>
+
+    <div id="lou3" class="hide animaBase"></div>
+    <div id="cao" class="animaBase"></div>
+
+    <div id="tree3" class="hide animaBase"></div>
+
+    <div id="four" class="hide animaBase"></div>
+    <div id="text3" class="animaBase hide">十二月 收获幸福</div>
+  </div>
+
+  <script src="js/zepto.min.js"></script>
+  <script src="js/move.min.js"></script>
+  <script>
+$(function($) {
+  var $butterfly = $('#butterfly')
+  ,$lou = $('#lou')
+  ,$hand = $('#hand')
+  ,$tree1 = $('#tree1')
+  ,$text1 = $('#text1')
+  ,$lou2 = $('#lou2')
+  ,$man = $('#man')
+  ,$cao = $('#cao')
+  ,$text2 = $('#text2')
+  ,$four = $('#four')
+  ,$tree3 = $('#tree3')
+  ,$lou3 = $('#lou3')
+  ,$text3 = $('#text3')
+  ,$p1 = $('#p1')
+  ,$p2 = $('#p2')
+  ,$p3 = $('#p3')
+
+
+setTimeout(function(){
+  $hand.show()
+  $hand.addClass('animated fadeInLeft');
+},300);
+
+setTimeout(function(){
+  $tree1.show()
+  $tree1.addClass('animated fadeInUp');
+},900);
+
+setTimeout(function(){
+  $text1.show()
+  $text1.addClass('animated fadeInRightBig');
+},1800);
+
+setTimeout(function(){
+  $butterfly.show()
+  $butterfly.addClass('animated flash');
+},2100);
+
+setTimeout(function(){
+  $p1.animate({
+    opacity: 0
+  },1100, 'ease-out')
+  $cao.animate({
+    opacity: 0
+  },1200, 'ease-out')
+
+  $lou2.show();
+  $lou2.animate({
+    opacity: 1
+  },2400, 'ease-in')
+},4500);
+
+setTimeout(function(){
+  $man.show();
+  $man.addClass('animated fadeInUp');
+},6500);
+
+setTimeout(function(){
+  $text2.show();
+  $text2.addClass('animated fadeInLeftBig');
+},7900);
+
+setTimeout(function(){
+  $p2.animate({
+    opacity: 0
+  },1100, 'ease-out')
+  $cao.animate({
+    opacity: 1
+  },1100, 'ease-out')
+
+},12000);
+
+setTimeout(function(){
+  $lou3.show();
+  $lou3.addClass('animated fadeInUp');
+  $tree3.show();
+  $tree3.addClass('animated fadeInRight');
+},12900);
+
+setTimeout(function(){
+  $four.show();
+  $four.addClass('animated fadeIn');
+},14800);
+
+setTimeout(function(){
+  $text3.show();
+  $text3.addClass('animated fadeInLeftBig');
+},15500);
+
+});
+
+</script>
+</body>
+</html>
